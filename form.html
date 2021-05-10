@@ -105,10 +105,10 @@
 
 
             <p>Type of cone:
-              <input type="radio" id="Cone" name="Cone" value="Cup"> <label>Cup</label>
-              <input type="radio" id="Cone" name="Cone" value="Wafflecone"> <label>Waffle cone</label>
-              <input type="radio" id="Cone" name="Cone" value="Cakecone"> <label>Cake cone</label>
-              <input type="radio" id="Cone" name="Cone" value="Sugarcone"> <label>Sugar cone</label>
+              <input type="radio" id="cone" name="cone" value="cup"> <label>Cup</label>
+              <input type="radio" id="cone" name="cone" value="wafflecone"> <label>Waffle cone</label>
+              <input type="radio" id="cone" name="cone" value="cakecone"> <label>Cake cone</label>
+              <input type="radio" id="cone" name="cone" value="sugarcone"> <label>Sugar cone</label>
           </p>
 
 
@@ -133,18 +133,27 @@
 
       function capture() {
       
-      var name, size, cone;
-      var inputname = document.getElementById("custname");
-      var inputsize = document.getElementsByName("size");
-      var inputcone = document.getElementsByName("Cone");
+      //define variables
+      var name, size, flavor, cone;
       
+      //capture form elements
+      //customer name
+      var inputname = document.getElementById("custname");
       name = inputname.value;
       
+      //size
+      var inputsize = document.getElementsByName("size");
       for(i=0;i<inputsize.length;i++) {
         if(inputsize[i].checked)
         size = inputsize[i].value;
       }
-     
+
+      //flavor
+      var inputflavor = document.getElementById("flavor");
+      flavor = inputflavor.value;
+
+      //cone
+      var inputcone = document.getElementsByName("cone");
       for(i=0;i<inputcone.length;i++) {
         if(inputcone[i].checked)
         cone = inputcone[i].value;
@@ -153,6 +162,7 @@
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
       console.log("Size :", size)
+      console.log("Flavor :", flavor)
       console.log("Cone :", cone)
 
       }
