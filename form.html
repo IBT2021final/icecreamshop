@@ -66,42 +66,42 @@
         -->
 
         <fieldset>
-            <legend>Order:</legend>
-            <p>Name: 
-                <input type="text" id="name" value = "Your name">
-            </p>
+          <legend>Order:</legend>
+           <p>Name: 
+              <input type="text" id="custname">
+           </p>
 
-            <p>Size:
-              <input type="radio" id="size" name="size" value="small"> <label>Small</label>
-              <input type="radio" id="size" name="size" value="medium"> <label>Medium</label>
-              <input type="radio" id="size" name="size" value="large"> <label>Large</label>
-          </p>
+           <p>Size:
+            <input type="radio" id="size" name="size" value="small"> <label>Small</label>
+            <input type="radio" id="size" name="size" value="medium"> <label>Medium</label>
+            <input type="radio" id="size" name="size" value="large"> <label>Large</label>
+        </p>
           
-            <p>Flavor:
-                <select name="flavor" id="flavor">
-                    <option value="vanilla">Vanilla</option>
-                    <option value="chocolate">Chocolate</option>
-                    <option value="strawberry">Strawberry</option>
-                    <option value="coffee">Coffee</option>
-                    <option value="butterscotch">Butterscotch</option>
-                    <option value="cakebatter">Cake Batter</option>
-                    <option value="chocochip">Choco Chip</option>
-                </select>
-            </p>
-
-            <p>
-              <label for="toppings">Toppings:</label>
-              <select id="toppings" name="toppings" size="7" multiple>
-                <option value="none">None</option>
-                <option value="m&ms">M&Ms</option>
-                <option value="sprinkles">Sprinkles</option>
-                <option value="chocolatechips">Chocolate Chips</option>
-                <option value="fudge">Fudge</option>
-                <option value="oreos">Oreos</option>
-                <option value="browniebites">Brownie bites</option>
+           <p>Flavor:
+              <select name="flavor" id="flavor">
+                 <option value="vanilla">Vanilla</option>
+                 <option value="chocolate">Chocolate</option>
+                 <option value="strawberry">Strawberry</option>
+                 <option value="coffee">Coffee</option>
+                 <option value="butterscotch">Butterscotch</option>
+                 <option value="cakebatter">Cake Batter</option>
+                 <option value="chocochip">Choco Chip</option>
               </select>
-              <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options for the toppings</p>
-            </p>
+           </p>
+
+           <p>
+             <label for="toppings">Toppings:</label>
+             <select id="toppings" name="toppings" size="7" multiple>
+               <option value="none">None</option>
+               <option value="m&ms">M&Ms</option>
+               <option value="sprinkles">Sprinkles</option>
+               <option value="chocolatechips">Chocolate Chips</option>
+               <option value="fudge">Fudge</option>
+               <option value="oreos">Oreos</option>
+               <option value="browniebites">Brownie bites</option>
+             </select>
+             <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options for the toppings</p>
+           </p>
 
 
             <p>Type of cone:
@@ -120,12 +120,43 @@
           </select>
           </p>
 
-          <input type="submit" id="submit-btn" value="Submit">
-
+          <input type="submit" id="submit-btn" value="Submit" onclick="capture()">
+          </fieldset>
       </form>
         
       <div class="desc">You will receive order confirmation shortly.</div>
       </div>
+
+      <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      function capture() {
+      
+      var name, size, cone;
+      var inputname = document.getElementById("custname");
+      var inputsize = document.getElementsByName("size");
+      var inputcone = document.getElementsByName("Cone");
+      
+      name = inputname.value;
+      
+      for(i=0;i<inputsize.length;i++) {
+        if(inputsize[i].checked)
+        size = inputsize[i].value;
+      }
+     
+      for(i=0;i<inputcone.length;i++) {
+        if(inputcone[i].checked)
+        cone = inputcone[i].value;
+      }
+
+      console.log("Thanks for the page visit!")
+      console.log("Name:", name)
+      console.log("Size :", size)
+      console.log("Cone :", cone)
+
+      }
+    </script>
 
       <footer style="margin-top:2em; margin-bottom:2em;">
         <hr>
@@ -134,20 +165,6 @@
       </footer>
     </div>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-
-      var Custname = document.getElementById("name")
-      var size = document.getElementById("size")
-      var flavor = document.getElementById("flavor")
-      var toppings = document.getElementById("toppings")
-      var cone = document.getElementById("Cone")
-      var pickuptime = docuemnt.getElementById("pickuptime")
-
-
-        console.log("Thanks for the page visit!")
-
-    </script>
+    
   </body>
 </html>
