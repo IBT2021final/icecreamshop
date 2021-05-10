@@ -71,6 +71,12 @@
                 <input type="text" id="name" value = "Your name">
             </p>
 
+            <p>Size:
+              <input type="radio" id="size" name="size" value="small"> <label>Small</label>
+              <input type="radio" id="size" name="size" value="medium"> <label>Medium</label>
+              <input type="radio" id="size" name="size" value="large"> <label>Large</label>
+          </p>
+          
             <p>Flavor:
                 <select name="flavor" id="flavor">
                     <option value="vanilla">Vanilla</option>
@@ -82,14 +88,39 @@
                     <option value="chocochip">Choco Chip</option>
                 </select>
             </p>
-            <p>Size:
-                <input type="radio" id="size" name="size" value="small"> <label>Small</label>
+
+            <p>
+              <label for="toppings">Toppings:</label>
+              <select id="toppings" name="toppings" size="7" multiple>
+                <option value="none">None</option>
+                <option value="m&ms">M&Ms</option>
+                <option value="sprinkles">Sprinkles</option>
+                <option value="chocolatechips">Chocolate Chips</option>
+                <option value="fudge">Fudge</option>
+                <option value="oreos">Oreos</option>
+                <option value="browniebites">Brownie bites</option>
+              </select>
+              <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options for the toppings</p>
             </p>
 
 
+            <p>Type of cone:
+              <input type="radio" id="Cone" name="Cone" value="Cup"> <label>Cup</label>
+              <input type="radio" id="Cone" name="Cone" value="Wafflecone"> <label>Waffle cone</label>
+              <input type="radio" id="Cone" name="Cone" value="Cakecone"> <label>Cake cone</label>
+              <input type="radio" id="Cone" name="Cone" value="Sugarcone"> <label>Sugar cone</label>
+          </p>
 
 
+          <p>Pickup Time:
+            <select name="pickuptime" id="pickuptime">
+              <option value="asap">ASAP</option>
+              <option value="30mins">In 30 minutes</option>
+              <option value="1hr">In 1 hour</option>
+          </select>
+          </p>
 
+          <input type="submit">
 
       </form>
         
@@ -98,7 +129,7 @@
 
 
 
-      <div class="desc">Click on the Summoner's Rift map to go directly to the original Riot web page and learn more about League of Legends.</div>
+      <div class="desc">You will receive order confirmation shortly.</div>
       </div>
 
       <footer style="margin-top:2em; margin-bottom:2em;">
