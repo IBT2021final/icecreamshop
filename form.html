@@ -54,7 +54,7 @@
       </div>
 
       <div class="gallery">
-      <form>
+      <form name="icorder">
         <!--
             input box - name
             drop down box for base flavors - vanilla, chocolate, strawberry, coffee, cake batter, butterscotch, choco chip
@@ -88,7 +88,7 @@
                  <option value="chocochip">Choco Chip</option>
               </select>
            </p>
-
+<!--
            <p>
              <label for="toppings">Toppings:</label>
              <select id="toppings" name="toppings" size="7" multiple>
@@ -102,9 +102,19 @@
              </select>
              <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options for the toppings</p>
            </p>
+          -->
 
-
-            <p>Type of cone:
+           <p>
+            <label for="toppings">Toppings:</label>
+              <input type="checkbox" name="toppings" value="m&ms"> M&M's
+              <input type="checkbox" name="toppings" value="sprinkles"> Sprinkles
+              <input type="checkbox" name="toppings" value="chocolatechips"> Chocolate Chips
+              <input type="checkbox" name="toppings" value="fudge"> Fudge
+              <input type="checkbox" name="toppings" value="oreos"> Oreos
+              <input type="checkbox" name="toppings" value="browniebites"> Brownie Bites
+           </p>
+          
+          <p>Type of cone:
               <input type="radio" id="cone" name="cone" value="cup"> <label>Cup</label>
               <input type="radio" id="cone" name="cone" value="wafflecone"> <label>Waffle cone</label>
               <input type="radio" id="cone" name="cone" value="cakecone"> <label>Cake cone</label>
@@ -134,7 +144,7 @@
       function capture() {
       
       //define variables
-      var name, size, flavor, cone;
+      var name, size, flavor, topno = 0, cone;
       
       //capture form elements
       //customer name
@@ -152,6 +162,13 @@
       var inputflavor = document.getElementById("flavor");
       flavor = inputflavor.value;
 
+      //toppings
+      var cbs = document.forms["icorder"].elements["toppings"];
+      for(i=0;i<cbs.length;i++) {
+        if(cbs[i].checked)
+        topno = topno + 1;
+      }
+
       //cone
       var inputcone = document.getElementsByName("cone");
       for(i=0;i<inputcone.length;i++) {
@@ -159,10 +176,15 @@
         cone = inputcone[i].value;
       }
 
+       //flavor
+       var inputflavor = document.getElementById("flavor");
+      flavor = inputflavor.value;
+
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
       console.log("Size :", size)
       console.log("Flavor :", flavor)
+      console.log("No of toppings :", topno)
       console.log("Cone :", cone)
 
       }
