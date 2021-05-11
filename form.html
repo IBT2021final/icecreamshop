@@ -202,9 +202,31 @@
       console.log("Flavor :", flavor)
       console.log("No of toppings :", topno)
       console.log("Cone :", cone)
-      console.log("Date: ", today)
-
+      console.log("Date: ", date)
       }
+
+      var requestUrl = "https://ibt2021final.github.io/icecreamshop/pricemaster.json"
+      console.log("REQUEST URL", requestUrl)
+        fetch(requestUrl)
+        .then(response => response.json())
+        .then(pricemaster => {
+            console.log("PRICES", pricemaster)
+            console.log(pricemaster["size"]["medium"])
+          // etc...
+        
+
+
+
+
+
+
+
+
+        }).catch(function(err){
+            console.error("OOPS", err)
+               alert("OOPS, please check your inputs and try again!")
+        })
+
     </script>
 
       <footer style="margin-top:2em; margin-bottom:2em;">
