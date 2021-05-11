@@ -122,6 +122,7 @@
           </p>
 
 
+          <!--
           <p>Pickup Time:
             <select name="pickuptime" id="pickuptime">
               <option value="asap">ASAP</option>
@@ -129,6 +130,13 @@
               <option value="1hr">In 1 hour</option>
           </select>
           </p>
+          -->
+
+          <p>Pickup Time:
+            <input type="date" id="date">
+          </p>
+
+
 
           <input type="submit" id="submit-btn" value="Submit" onclick="capture()">
           </fieldset>
@@ -156,7 +164,7 @@
       for(i=0;i<inputsize.length;i++) {
         if(inputsize[i].checked)
         size = inputsize[i].value;
-      }
+        }
 
       //flavor
       var inputflavor = document.getElementById("flavor");
@@ -167,18 +175,21 @@
       for(i=0;i<cbs.length;i++) {
         if(cbs[i].checked)
         topno = topno + 1;
-      }
+        }
 
       //cone
       var inputcone = document.getElementsByName("cone");
       for(i=0;i<inputcone.length;i++) {
         if(inputcone[i].checked)
         cone = inputcone[i].value;
-      }
+        }
 
-       //flavor
-       var inputflavor = document.getElementById("flavor");
-      flavor = inputflavor.value;
+       //date
+       var inputdate = document.getElementById("date").value;
+       var date = new Date(inputdate);
+       var displaydate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
+
+       var today = new Date();
 
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
@@ -186,6 +197,7 @@
       console.log("Flavor :", flavor)
       console.log("No of toppings :", topno)
       console.log("Cone :", cone)
+      console.log("Date: ", today)
 
       }
     </script>
