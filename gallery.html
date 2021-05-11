@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 10px;
+  float: right;
+  width: 33%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 50%;
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <!--
+      BOOTSTRAP NAV
+      https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Ice Cream Shop</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Order an Ice Cream</a>
+            </li>
+            
+             <li class="nav-item">
+              <a class="nav-link active" href="#">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--
+      PAGE CONTENTS
+    -->
+<br>    
+    <h2><center>Ice Cream Gallery</center></h2>
+<br>
+<h6><center><i>Welcome to the Ice Cream Gallery @Ice Cream Shop</i></center></h6>
+<br>
+<h3><center><i>Ice Cream Flavors</i></center></h3>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.tasteandtellblog.com/wp-content/uploads/2019/06/Homemade-Vanilla-Ice-Cream-Recipe-tasteandtellblog.com-2.jpg" alt="Vanilla Ice Cream" width="400" height="600">
+    </a>
+    <div class="desc">Vanilla Ice Cream</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.giverecipe.com/wp-content/uploads/2014/04/Homemade-Chocolate-Ice-Cream-5.jpg" alt="Chocolate Ice Cream" width="400" height="600">
+    </a>
+    <div class="desc">Chocolate Ice Cream</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.livinglou.com/wp-content/uploads/2013/06/the-best-homemade-strawberry-ice-cream.jpg" alt="Strawberry Ice Cream" width="400" height="600">
+    </a>
+    <div class="desc">Strawberry Ice Cream</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://livelikeyouarerich.com/wp-content/uploads/2015/08/espress-chocolate-chip-ice-cream-tablefortwoblog-1.jpg" alt="Coffee Ice Cream" width="400" height="600">
+    </a>
+    <div class="desc">Coffee Ice Cream</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.davidlebovitz.com/wp-content/uploads/2020/05/Chocolate-chip-ice-cream-gelato-amaro-recipe_-9.jpg" alt="Choco Chip Ice Cream" width="400" height="600">
+    </a>
+    <div class="desc">Choco Chip Ice Cream</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://burrataandbubbles.com/wp-content/uploads/2019/11/butterscotch-ice-cream-5.jpg" alt="Butterscotch Ice Cream" width="400" height="600">
+    </a>
+    <div class="desc">Butterscotch Ice Cream</div>
+  </div>
+</div>
+
+<br>
+<h3><center><i>Topping</i></center></h3>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://cdnimg.webstaurantstore.com/images/products/large/24892/1278379.jpg" alt="M&Ms" width="600" height="600">
+    </a>
+    <div class="desc">M&Ms</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://cdn.shopify.com/s/files/1/0363/8408/0004/products/sprinkles_1200x.jpg?v=1601956416" alt="Sprinkles" width="600" height="600">
+    </a>
+    <div class="desc">Sprinkles</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/61gfR8JxInL._SL1000_.jpg" alt="Chocolate Chips" width="600" height="600">
+    </a>
+    <div class="desc">Chocolate Chips</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://www.thespruceeats.com/thmb/QNpa5CPeUfNU9FRDqpMN3SniV60=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/old-fashioned-hot-fudge-recipe-101284-hero-01-5be20e8d46e0fb0026f59c26.jpg" alt="Fudge" width="400" height="600">
+    </a>
+    <div class="desc">Fudge</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://mildlymeandering.com/wp-content/uploads/2021/01/07-No-Bake-Oreo-Cheesecake.jpg" alt="Oreos" width="400" height="600">
+    </a>
+    <div class="desc">Oreos</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="https://thebakermama.com/wp-content/uploads/2015/10/IMG_7073.jpg" alt="Butterscotch Ice Cream" width="400" height="600">
+    </a>
+    <div class="desc">Brownie Bites</div>
+  </div>
+</div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        console.log("Thanks for the page visit!")
+
+    </script>
+  </body>
+</html>
