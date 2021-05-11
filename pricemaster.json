@@ -13,15 +13,6 @@
     {"cakebutter": 1},
     {"chocochip": 1}
   ],
-  "toppings": [
-    {"none": 0},
-    {"m&ms": 0.1},
-    {"spinkles": 0.1},
-    {"chocolatechips": 1},
-    {"fudge": 1},
-    {"oreos": 1},
-    {"browniebites": 1}
-  ],
   "cone": [
     {"cup": 0.5},
     {"wafflecone": 0.8},
