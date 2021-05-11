@@ -22,11 +22,11 @@
     {"oreos": 1},
     {"browniebites": 1}
   ],
-  "Cone": [
-    {"Cup": 0.5},
-    {"Wafflecone": 0.8},
-    {"Cakecone": 0.8},
-    {"Sugarcone": 0.8}
+  "cone": [
+    {"cup": 0.5},
+    {"wafflecone": 0.8},
+    {"cakecone": 0.8},
+    {"sugarcone": 0.8}
   ],
   "pickuptime": [
     {"asap": 2},

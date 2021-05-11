@@ -54,7 +54,7 @@
       </div>
 
       <div class="gallery">
-      <form>
+      <form name="icorder">
         <!--
             input box - name
             drop down box for base flavors - vanilla, chocolate, strawberry, coffee, cake batter, butterscotch, choco chip
@@ -66,52 +66,63 @@
         -->
 
         <fieldset>
-            <legend>Order:</legend>
-            <p>Name: 
-                <input type="text" id="name" value = "Your name">
-            </p>
+          <legend>Order:</legend>
+           <p>Name: 
+              <input type="text" id="custname">
+           </p>
 
-            <p>Size:
-              <input type="radio" id="size" name="size" value="small"> <label>Small</label>
-              <input type="radio" id="size" name="size" value="medium"> <label>Medium</label>
-              <input type="radio" id="size" name="size" value="large"> <label>Large</label>
-          </p>
+           <p>Size:
+            <input type="radio" id="size" name="size" value="small"> <label>Small</label>
+            <input type="radio" id="size" name="size" value="medium"> <label>Medium</label>
+            <input type="radio" id="size" name="size" value="large"> <label>Large</label>
+        </p>
           
-            <p>Flavor:
-                <select name="flavor" id="flavor">
-                    <option value="vanilla">Vanilla</option>
-                    <option value="chocolate">Chocolate</option>
-                    <option value="strawberry">Strawberry</option>
-                    <option value="coffee">Coffee</option>
-                    <option value="butterscotch">Butterscotch</option>
-                    <option value="cakebatter">Cake Batter</option>
-                    <option value="chocochip">Choco Chip</option>
-                </select>
-            </p>
-
-            <p>
-              <label for="toppings">Toppings:</label>
-              <select id="toppings" name="toppings" size="7" multiple>
-                <option value="none">None</option>
-                <option value="m&ms">M&Ms</option>
-                <option value="sprinkles">Sprinkles</option>
-                <option value="chocolatechips">Chocolate Chips</option>
-                <option value="fudge">Fudge</option>
-                <option value="oreos">Oreos</option>
-                <option value="browniebites">Brownie bites</option>
+           <p>Flavor:
+              <select name="flavor" id="flavor">
+                 <option value="vanilla">Vanilla</option>
+                 <option value="chocolate">Chocolate</option>
+                 <option value="strawberry">Strawberry</option>
+                 <option value="coffee">Coffee</option>
+                 <option value="butterscotch">Butterscotch</option>
+                 <option value="cakebatter">Cake Batter</option>
+                 <option value="chocochip">Choco Chip</option>
               </select>
-              <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options for the toppings</p>
-            </p>
+           </p>
+<!--
+           <p>
+             <label for="toppings">Toppings:</label>
+             <select id="toppings" name="toppings" size="7" multiple>
+               <option value="none">None</option>
+               <option value="m&ms">M&Ms</option>
+               <option value="sprinkles">Sprinkles</option>
+               <option value="chocolatechips">Chocolate Chips</option>
+               <option value="fudge">Fudge</option>
+               <option value="oreos">Oreos</option>
+               <option value="browniebites">Brownie bites</option>
+             </select>
+             <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options for the toppings</p>
+           </p>
+          -->
 
-
-            <p>Type of cone:
-              <input type="radio" id="Cone" name="Cone" value="Cup"> <label>Cup</label>
-              <input type="radio" id="Cone" name="Cone" value="Wafflecone"> <label>Waffle cone</label>
-              <input type="radio" id="Cone" name="Cone" value="Cakecone"> <label>Cake cone</label>
-              <input type="radio" id="Cone" name="Cone" value="Sugarcone"> <label>Sugar cone</label>
+           <p>
+            <label for="toppings">Toppings:</label>
+              <input type="checkbox" name="toppings" value="m&ms"> M&M's
+              <input type="checkbox" name="toppings" value="sprinkles"> Sprinkles
+              <input type="checkbox" name="toppings" value="chocolatechips"> Chocolate Chips
+              <input type="checkbox" name="toppings" value="fudge"> Fudge
+              <input type="checkbox" name="toppings" value="oreos"> Oreos
+              <input type="checkbox" name="toppings" value="browniebites"> Brownie Bites
+           </p>
+          
+          <p>Type of cone:
+              <input type="radio" id="cone" name="cone" value="cup"> <label>Cup</label>
+              <input type="radio" id="cone" name="cone" value="wafflecone"> <label>Waffle cone</label>
+              <input type="radio" id="cone" name="cone" value="cakecone"> <label>Cake cone</label>
+              <input type="radio" id="cone" name="cone" value="sugarcone"> <label>Sugar cone</label>
           </p>
 
 
+          <!--
           <p>Pickup Time:
             <select name="pickuptime" id="pickuptime">
               <option value="asap">ASAP</option>
@@ -119,13 +130,77 @@
               <option value="1hr">In 1 hour</option>
           </select>
           </p>
+          -->
 
-          <input type="submit" id="submit-btn" value="Submit">
+          <p>Pickup Time:
+            <input type="date" id="date">
+          </p>
 
+
+
+          <input type="submit" id="submit-btn" value="Submit" onclick="capture()">
+          </fieldset>
       </form>
         
       <div class="desc">You will receive order confirmation shortly.</div>
       </div>
+
+      <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      function capture() {
+      
+      //define variables
+      var name, size, flavor, topno = 0, cone;
+      
+      //capture form elements
+      //customer name
+      var inputname = document.getElementById("custname");
+      name = inputname.value;
+      
+      //size
+      var inputsize = document.getElementsByName("size");
+      for(i=0;i<inputsize.length;i++) {
+        if(inputsize[i].checked)
+        size = inputsize[i].value;
+        }
+
+      //flavor
+      var inputflavor = document.getElementById("flavor");
+      flavor = inputflavor.value;
+
+      //toppings
+      var cbs = document.forms["icorder"].elements["toppings"];
+      for(i=0;i<cbs.length;i++) {
+        if(cbs[i].checked)
+        topno = topno + 1;
+        }
+
+      //cone
+      var inputcone = document.getElementsByName("cone");
+      for(i=0;i<inputcone.length;i++) {
+        if(inputcone[i].checked)
+        cone = inputcone[i].value;
+        }
+
+       //date
+       var inputdate = document.getElementById("date").value;
+       var date = new Date(inputdate);
+       var displaydate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
+
+       var today = new Date();
+
+      console.log("Thanks for the page visit!")
+      console.log("Name:", name)
+      console.log("Size :", size)
+      console.log("Flavor :", flavor)
+      console.log("No of toppings :", topno)
+      console.log("Cone :", cone)
+      console.log("Date: ", today)
+
+      }
+    </script>
 
       <footer style="margin-top:2em; margin-bottom:2em;">
         <hr>
@@ -134,20 +209,6 @@
       </footer>
     </div>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-
-      var Custname = document.getElementById("name")
-      var size = document.getElementById("size")
-      var flavor = document.getElementById("flavor")
-      var toppings = document.getElementById("toppings")
-      var cone = document.getElementById("Cone")
-      var pickuptime = docuemnt.getElementById("pickuptime")
-
-
-        console.log("Thanks for the page visit!")
-
-    </script>
+    
   </body>
 </html>
