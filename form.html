@@ -160,7 +160,7 @@
       
       
         var requestUrl = "https://ibt2021final.github.io/icecreamshop/pricemaster.json"
-      console.log("REQUEST URL", requestUrl)
+        console.log("REQUEST URL", requestUrl)
         fetch(requestUrl)
         .then(response => {
           console.log("RESPONSE", response)
@@ -213,6 +213,8 @@
         if(inputcone[i].checked)
         cone = inputcone[i].value;
         }
+
+      
 
       var cost = pricemaster["size"][size] + pricemaster["flavor"][flavor] + topno*r + pricemaster["cone"][cone]
 
