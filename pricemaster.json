@@ -1,22 +1,22 @@
 {
   "size": {
-    "small": "1",
-    "medium": "2",
-    "large": "3"
+    "small": 1,
+    "medium": 2,
+    "large": 3
   },
   "flavor": {
-    "vanilla": "4",
-    "chocolate": "5",
-    "strawberry": "6",
-    "coffee": "7",
-    "butterscotch": "8",
-    "cakebutter": "9",
-    "chocochip": "10"
+    "vanilla": 4,
+    "chocolate": 5,
+    "strawberry": 6,
+    "coffee": 7,
+    "butterscotch": 8,
+    "cakebutter": 9,
+    "chocochip": 10
   },
   "cone": {
-    "cup": "11",
-    "wafflecone": "12",
-    "cakecone": "13",
-    "sugarcone": "14"
+    "cup": 11,
+    "wafflecone": 12,
+    "cakecone": 13,
+    "sugarcone": 14
   }
 }
