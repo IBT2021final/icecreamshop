@@ -16,6 +16,8 @@ Use the form to enter your preferences for an ice cream. Once you submit the for
 4. https://stackoverflow.com/questions/7403486/add-or-subtract-timezone-difference-to-javascript-date
 5. https://www.w3schools.com/js/js_if_else.asp
 6. https://stackoverflow.com/questions/2721046/how-to-create-list-of-checkboxes
+7. https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link
+8. https://victorscholz.medium.com/hosting-a-json-api-on-github-pages-47b402f72603
 
 
 // add reference to twitter bootstrap
