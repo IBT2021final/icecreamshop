@@ -143,7 +143,7 @@
 
 
 
-          <input type="submit" id="submit-btn" value="Submit" onclick="capture()">
+          <button id="submit-btn">Submit</button>
           </fieldset>
       </form>
         
@@ -154,7 +154,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script type="text/javascript">
 
-      function capture() {
+
+      document.getElementById("submit-btn").onclick = function() {
       
       //define variables
       var name, size, flavor, topno = 0, cone;
@@ -203,30 +204,27 @@
       console.log("No of toppings :", topno)
       console.log("Cone :", cone)
       console.log("Date: ", date)
-      }
-
+            
       var requestUrl = "https://ibt2021final.github.io/icecreamshop/pricemaster.json"
       console.log("REQUEST URL", requestUrl)
         fetch(requestUrl)
-        .then(response => response.json())
+        .then(response => {
+          console.log("RESPONSE", response)
+          return response.json()})
         .then(pricemaster => {
             console.log("PRICES", pricemaster)
-            console.log(pricemaster["size"]["medium"])
-          // etc...
-        
-
-
-
-
-
-
-
-
+        // etc...
         }).catch(function(err){
             console.error("OOPS", err)
                alert("OOPS, please check your inputs and try again!")
-        })
+        })   ;   
+      
 
+
+
+
+
+    }
     </script>
 
       <footer style="margin-top:2em; margin-bottom:2em;">
