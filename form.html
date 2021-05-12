@@ -144,10 +144,12 @@
 
 
           <button id="submit-btn">Submit</button>
+          
           </fieldset>
       </form>
         
-      <div class="desc">You will receive order confirmation shortly. Your due amount is $<span id="displaycost">_______</span></div>
+      <div class="desc"><span id="displaycost"></span></div><br>
+      <div><button id="reset" value="Place another order" onclick="location.href='form.html';">Place another order!</button></div>
       </div>
 
       <!-- Bootstrap JS Bundle -->
@@ -214,7 +216,7 @@
 
       var cost = pricemaster["size"][size] + pricemaster["flavor"][flavor] + topno*r + pricemaster["cone"][cone]
 
-      document.getElementById("displaycost").innerHTML = cost; return false;
+      document.getElementById("displaycost").innerHTML = "You will receive order confirmation shortly. Your due amount is $"+cost; return false;
 
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
