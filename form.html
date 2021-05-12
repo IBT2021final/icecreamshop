@@ -138,7 +138,7 @@
           -->
 
           <p>Pickup Time:
-            <input type="date" id="date">
+            <input type="date" id="date" name = "date">
           </p>
 
 
@@ -147,7 +147,7 @@
           </fieldset>
       </form>
         
-      <div class="desc">You will receive order confirmation shortly.</div>
+      <div class="desc">You will receive order confirmation shortly. Your due amount is $<span id="displaycost">_______</span></div>
       </div>
 
       <!-- Bootstrap JS Bundle -->
@@ -172,8 +172,10 @@
           //date
           var inputdate = document.getElementById("date").value;
           var offset = new Date().getTimezoneOffset();
-          var date = new Date(inputdate) + offset/60;
-         
+          var date = new Date(inputdate);
+          var adjusteddate = new Date(date.getTime() + offset*60*1000)
+          var displaydate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
+
           var today = new Date();
           
           //error message for wrong date
@@ -210,7 +212,9 @@
         cone = inputcone[i].value;
         }
 
-       
+      var cost = pricemaster["size"][size] + pricemaster["flavor"][flavor] + topno*r + pricemaster["cone"][cone]
+
+      document.getElementById("displaycost").innerHTML = cost; return false;
 
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
@@ -218,7 +222,12 @@
       console.log("Flavor :", flavor, "Price :", pricemaster["flavor"][flavor])
       console.log("No of toppings :", topno, "Price for each :", r)
       console.log("Cone :", cone, "Price :", pricemaster["cone"][cone])
-      console.log("Date: ", date)
+      console.log("Delivery Date: ", date)
+      console.log("Today: ", today)
+      console.log("This is the offset: ", offset)
+      console.log("Adjusted delivery date :", adjusteddate)
+      console.log("Your total bill amount is $", cost)
+
 
       }
           }
