@@ -5,19 +5,19 @@
     "large": 2
   },
   "flavor": {
-    "vanilla": 0.20,
-    "chocolate": 0.40,
-    "strawberry": 0.30,
-    "coffee": 0.50,
-    "butterscotch": 0.30,
-    "cakebutter": 0.80,
-    "chocochip": 0.60
+    "vanilla": 0.2,
+    "chocolate": 0.4,
+    "strawberry": 0.3,
+    "coffee": 0.5,
+    "butterscotch": 0.3,
+    "cakebutter": 0.8,
+    "chocochip": 0.6
   },
-  "toppings":0.10,
+  "toppings":0.1,
   "cone": {
     "cup": 0,
-    "wafflecone": 0.50,
-    "cakecone": 0.40,
-    "sugarcone": 0.30
+    "wafflecone": 0.5,
+    "cakecone": 0.4,
+    "sugarcone": 0.3
   }
 }
