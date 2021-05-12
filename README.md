@@ -10,14 +10,12 @@ This is a website to order and pay for ice cream to ensure that people will be a
 Use the form to enter your preferences for an ice cream. Once you submit the form, the webpage will use client-side javascript to do an AJAX pull from a back-end database. We created a back-end database that contains the price for each selection. The AJAX pulls it from the hosted page (like any other API) and not from the internal directories.  Based on your selections, the webpage will calculate and display the total amount due.
 
 ## Website Code Reference list
-1. https://github.com/prof-rossetti/internet-technologies/blob/main/exercises/website-style/bootstrap_5_nav.html
-2. https://www.geeksforgeeks.org/how-to-get-value-of-selected-radio-button-using-javascript/
-3. https://phoenixnap.com/kb/how-to-get-the-current-date-and-time-javascript
-4. https://stackoverflow.com/questions/7403486/add-or-subtract-timezone-difference-to-javascript-date
-5. https://www.w3schools.com/js/js_if_else.asp
-6. https://stackoverflow.com/questions/2721046/how-to-create-list-of-checkboxes
-7. https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link
+1. https://getbootstrap.com/docs/5.0/examples/cover/
+2. https://github.com/prof-rossetti/internet-technologies/blob/main/exercises/website-style/bootstrap_5_nav.html
+3. https://www.geeksforgeeks.org/how-to-get-value-of-selected-radio-button-using-javascript/
+4. https://phoenixnap.com/kb/how-to-get-the-current-date-and-time-javascript
+5. https://stackoverflow.com/questions/7403486/add-or-subtract-timezone-difference-to-javascript-date
+6. https://www.w3schools.com/js/js_if_else.asp
+7. https://stackoverflow.com/questions/2721046/how-to-create-list-of-checkboxes
 8. https://victorscholz.medium.com/hosting-a-json-api-on-github-pages-47b402f72603
-
-
-// add reference to twitter bootstrap
+9. https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link
