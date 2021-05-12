@@ -173,15 +173,14 @@
       
           //date
           var inputdate = document.getElementById("date").value;
-          var offset = new Date().getTimezoneOffset();
           var date = new Date(inputdate);
-          var adjusteddate = new Date(date.getTime() + offset*60*1000)
-          var displaydate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
-
+          var offset = new Date().getTimezoneOffset();
+          var adjusteddate = new Date(date.getTime() + offset*60*1000) //adjusted for the GMT -4 time zone
+          
           var today = new Date();
           
           //error message for wrong date
-          if(date <= today)
+          if(adjusteddate <= today)
           {alert("Earliest we can deliver is the next day!");}
           else {
           //capture form elements
@@ -206,7 +205,7 @@
         if(cbs[i].checked)
         topno = topno + 1;
         }
-      const r = 3.5;
+      const r = pricemaster["toppings"];
       //cone
       var inputcone = document.getElementsByName("cone");
       for(i=0;i<inputcone.length;i++) {
@@ -216,7 +215,7 @@
 
       var cost = pricemaster["size"][size] + pricemaster["flavor"][flavor] + topno*r + pricemaster["cone"][cone]
 
-      document.getElementById("displaycost").innerHTML = "You will receive order confirmation shortly. Your due amount is $"+cost; return false;
+      document.getElementById("displaycost").innerHTML = "You will receive order confirmation shortly. Your due amount is $"+cost;
 
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
@@ -230,6 +229,7 @@
       console.log("Adjusted delivery date :", adjusteddate)
       console.log("Your total bill amount is $", cost)
 
+      
 
       }
           }
