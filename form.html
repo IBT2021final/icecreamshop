@@ -155,26 +155,35 @@
     <script type="text/javascript">
 
 
-      document.getElementById("submit-btn").onclick = function() {
       
-      //define variables
-      var name, size, flavor, topno = 0, cone;
       
-      //capture form elements
-      //customer name
-      var inputname = document.getElementById("custname");
-      name = inputname.value;
+        var requestUrl = "https://ibt2021final.github.io/icecreamshop/pricemaster.json"
+      console.log("REQUEST URL", requestUrl)
+        fetch(requestUrl)
+        .then(response => {
+          console.log("RESPONSE", response)
+          return response.json()})
+        .then(pricemaster => {
+            console.log("PRICES", pricemaster)
+            document.getElementById("submit-btn").onclick  = function() {
+          //define variables
+          var name, size, flavor, topno = 0, cone;
       
-      //size
-      var inputsize = document.getElementsByName("size");
-      for(i=0;i<inputsize.length;i++) {
-        if(inputsize[i].checked)
-        size = inputsize[i].value;
-        }
+          //capture form elements
+          //customer name
+         var inputname = document.getElementById("custname");
+          name = inputname.value;
+      
+         //size
+         var inputsize = document.getElementsByName("size");
+         for(i=0;i<inputsize.length;i++) {
+         if(inputsize[i].checked)
+         size = inputsize[i].value;
+         }
 
-      //flavor
-      var inputflavor = document.getElementById("flavor");
-      flavor = inputflavor.value;
+         //flavor
+         var inputflavor = document.getElementById("flavor");
+         flavor = inputflavor.value;
 
       //toppings
       var cbs = document.forms["icorder"].elements["toppings"];
@@ -182,7 +191,7 @@
         if(cbs[i].checked)
         topno = topno + 1;
         }
-
+      const r = 3.5;
       //cone
       var inputcone = document.getElementsByName("cone");
       for(i=0;i<inputcone.length;i++) {
@@ -199,32 +208,25 @@
 
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
-      console.log("Size :", size)
-      console.log("Flavor :", flavor)
-      console.log("No of toppings :", topno)
-      console.log("Cone :", cone)
+      console.log("Size :", size, "Price :", pricemaster["size"][size])
+      console.log("Flavor :", flavor, "Price :", pricemaster["flavor"][flavor])
+      console.log("No of toppings :", topno, "Price for each :", r)
+      console.log("Cone :", cone, "Price :", pricemaster["cone"][cone])
       console.log("Date: ", date)
-            
-      var requestUrl = "https://ibt2021final.github.io/icecreamshop/pricemaster.json"
-      console.log("REQUEST URL", requestUrl)
-        fetch(requestUrl)
-        .then(response => {
-          console.log("RESPONSE", response)
-          return response.json()})
-        .then(pricemaster => {
-            console.log("PRICES", pricemaster)
-        // etc...
-        }).catch(function(err){
+
+       
+          }
+        })
+                .catch(function(err){
             console.error("OOPS", err)
                alert("OOPS, please check your inputs and try again!")
-        })   ;   
-      
-
-
-
-
-
-    }
+        })  
+     
+  
+     
+    
+   
+    
     </script>
 
       <footer style="margin-top:2em; margin-bottom:2em;">
