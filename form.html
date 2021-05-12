@@ -216,7 +216,7 @@
 
       var cost = pricemaster["size"][size] + pricemaster["flavor"][flavor] + topno*r + pricemaster["cone"][cone]
 
-      document.getElementById("displaycost").innerHTML = "Thank You for placing an order, "+name+"! You will receive order confirmation shortly. Your due amount is $"+cost;
+      document.getElementById("displaycost").innerHTML = "Thank You for placing an order, "+name+"! You will receive order confirmation shortly. Your due amount is $"+cost.toFixed(2);
 
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
