@@ -19,3 +19,6 @@ Use the form to enter your preferences for an ice cream. Once you submit the for
 7. https://stackoverflow.com/questions/2721046/how-to-create-list-of-checkboxes
 8. https://victorscholz.medium.com/hosting-a-json-api-on-github-pages-47b402f72603
 9. https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link
+10. https://www.w3schools.com/css/default.asp
+11. https://www.w3schools.com/html/default.asp
+12. https://www.w3schools.com/html/html_form_attributes_form.asp
