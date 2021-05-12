@@ -183,6 +183,7 @@
           if(adjusteddate <= today)
           {alert("Earliest we can deliver is the next day!");}
           else {
+         
           //capture form elements
           //customer name
          var inputname = document.getElementById("custname");
@@ -215,7 +216,7 @@
 
       var cost = pricemaster["size"][size] + pricemaster["flavor"][flavor] + topno*r + pricemaster["cone"][cone]
 
-      document.getElementById("displaycost").innerHTML = "You will receive order confirmation shortly. Your due amount is $"+cost;
+      document.getElementById("displaycost").innerHTML = "Thank You for placing an order, "+name+"! You will receive order confirmation shortly. Your due amount is $"+cost;
 
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
