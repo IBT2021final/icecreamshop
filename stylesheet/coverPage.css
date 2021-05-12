@@ -1,0 +1,15 @@
+/* This template was sourced from Bootstrap example page, https://getbootstrap.com/docs/5.0/examples/cover/ -->
+ */
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; 
+}
+
+.cover-container {
+  background-image: url(https://www.pittsburghmagazine.com/content/uploads/data-import/1d64829b/millies17953.jpg);
+  background-size: cover;
+  background-position: center;
+}
