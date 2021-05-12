@@ -169,6 +169,17 @@
           //define variables
           var name, size, flavor, topno = 0, cone;
       
+          //date
+          var inputdate = document.getElementById("date").value;
+          var offset = new Date().getTimezoneOffset();
+          var date = new Date(inputdate) + offset/60;
+         
+          var today = new Date();
+          
+          //error message for wrong date
+          if(date <= today)
+          {alert("Earliest we can deliver is the next day!");}
+          else {
           //capture form elements
           //customer name
          var inputname = document.getElementById("custname");
@@ -199,12 +210,7 @@
         cone = inputcone[i].value;
         }
 
-       //date
-       var inputdate = document.getElementById("date").value;
-       var date = new Date(inputdate);
-       var displaydate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
-
-       var today = new Date();
+       
 
       console.log("Thanks for the page visit!")
       console.log("Name:", name)
@@ -214,7 +220,7 @@
       console.log("Cone :", cone, "Price :", pricemaster["cone"][cone])
       console.log("Date: ", date)
 
-       
+      }
           }
         })
                 .catch(function(err){
